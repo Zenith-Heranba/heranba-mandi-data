@@ -14,20 +14,20 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests
-        shell: bash
 
       - name: Fetch latest mandi prices
         run: python fetch_mandi_prices.py
-        shell: bash
         env:
           DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
 
       - name: Commit updated JSON
-        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add mandi_prices.json
-          git diff --staged --quiet || git commit -m "Update mandi prices $(date +'%Y-%m-%d')"
-          git push
+          git diff --staged --quiet
+          if ($LASTEXITCODE -ne 0) {
+            git commit -m "Update mandi prices $(Get-Date -Format 'yyyy-MM-dd')"
+            git push
+          }
 
