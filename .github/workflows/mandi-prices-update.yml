@@ -8,23 +8,22 @@ on:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
       - name: Install dependencies
         run: pip install requests
+        shell: bash
 
       - name: Fetch latest mandi prices
         run: python fetch_mandi_prices.py
+        shell: bash
         env:
           DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
 
       - name: Commit updated JSON
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
