@@ -30,7 +30,6 @@ if not API_KEY:
         "DATA_GOV_API_KEY is not set. Export it locally before running, "
         "e.g. (PowerShell) $env:DATA_GOV_API_KEY='your-key-here'"
     )
-print(f"DEBUG key length={len(API_KEY)} repr={API_KEY!r}")
 RESOURCE_ID = "35985678-0d79-46b4-9ed6-6f13308a1d24"
 BASE_URL = f"https://api.data.gov.in/resource/{RESOURCE_ID}"
 PAGE_SIZE = 1000
