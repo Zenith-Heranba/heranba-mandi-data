@@ -9,6 +9,8 @@ on:
 jobs:
   fetch:
     runs-on: self-hosted
+    permissions:
+      contents: write
     steps:
       - name: Ensure Git is on PATH
         run: Add-Content -Path $env:GITHUB_PATH -Value "C:\Users\pratik.m\AppData\Local\Programs\Git\cmd"
