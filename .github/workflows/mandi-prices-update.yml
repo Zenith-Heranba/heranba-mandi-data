@@ -13,6 +13,9 @@ jobs:
       - name: Ensure Git is on PATH
         run: Add-Content -Path $env:GITHUB_PATH -Value "C:\Users\pratik.m\AppData\Local\Programs\Git\cmd"
 
+      - name: Trust the runner's working directory regardless of owner
+        run: git config --global --add safe.directory "$env:GITHUB_WORKSPACE"
+
       - uses: actions/checkout@v4
 
       - name: Install dependencies
