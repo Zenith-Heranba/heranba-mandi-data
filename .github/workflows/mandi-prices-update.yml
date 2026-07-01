@@ -31,3 +31,4 @@ jobs:
           git add mandi_prices.json
           git diff --staged --quiet || git commit -m "Update mandi prices $(date +'%Y-%m-%d')"
           git push
+
