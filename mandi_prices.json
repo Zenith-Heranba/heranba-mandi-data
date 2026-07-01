@@ -1,0 +1,210 @@
+{
+  "last_updated": "01/07/2026",
+  "generated_at": "2026-07-01T05:26:25.783041Z",
+  "states": {
+    "Keralam": {
+      "Pampady Market": [
+        {
+          "commodity": "Ashgourd",
+          "variety": "Ashgourd",
+          "grade": "FAQ",
+          "min_price": 2500,
+          "max_price": 4000,
+          "modal_price": 3500
+        },
+        {
+          "commodity": "Onion",
+          "variety": "Big",
+          "grade": "FAQ",
+          "min_price": 2600,
+          "max_price": 3000,
+          "modal_price": 2800
+        },
+        {
+          "commodity": "Snakeguard",
+          "variety": "Snakeguard",
+          "grade": "FAQ",
+          "min_price": 3500,
+          "max_price": 4500,
+          "modal_price": 4000
+        },
+        {
+          "commodity": "Indian Beans(Seam)",
+          "variety": "Other",
+          "grade": "FAQ",
+          "min_price": 9000,
+          "max_price": 10500,
+          "modal_price": 10000
+        },
+        {
+          "commodity": "Cowpea(Veg)",
+          "variety": "Cowpea (Veg)",
+          "grade": "FAQ",
+          "min_price": 7500,
+          "max_price": 9000,
+          "modal_price": 8500
+        },
+        {
+          "commodity": "Beetroot",
+          "variety": "Beetroot",
+          "grade": "FAQ",
+          "min_price": 3400,
+          "max_price": 5000,
+          "modal_price": 4000
+        },
+        {
+          "commodity": "Tapioca",
+          "variety": "Tapioca",
+          "grade": "FAQ",
+          "min_price": 2200,
+          "max_price": 3000,
+          "modal_price": 2500
+        },
+        {
+          "commodity": "Cucumbar(Kheera)",
+          "variety": "Cucumbar",
+          "grade": "FAQ",
+          "min_price": 2000,
+          "max_price": 3500,
+          "modal_price": 3000
+        },
+        {
+          "commodity": "Tomato",
+          "variety": "Tomato",
+          "grade": "FAQ",
+          "min_price": 4600,
+          "max_price": 6500,
+          "modal_price": 5000
+        },
+        {
+          "commodity": "Pumpkin",
+          "variety": "Pumpkin",
+          "grade": "Grade A",
+          "min_price": 2200,
+          "max_price": 4000,
+          "modal_price": 3000
+        },
+        {
+          "commodity": "Little gourd(Kundru)",
+          "variety": "Other",
+          "grade": "FAQ",
+          "min_price": 4800,
+          "max_price": 6000,
+          "modal_price": 5000
+        },
+        {
+          "commodity": "Colacasia",
+          "variety": "Other",
+          "grade": "FAQ",
+          "min_price": 4000,
+          "max_price": 5500,
+          "modal_price": 5000
+        },
+        {
+          "commodity": "Potato",
+          "variety": "Big",
+          "grade": "FAQ",
+          "min_price": 2300,
+          "max_price": 4000,
+          "modal_price": 3500
+        },
+        {
+          "commodity": "Green Chilli",
+          "variety": "Green Chilly",
+          "grade": "FAQ",
+          "min_price": 7000,
+          "max_price": 8000,
+          "modal_price": 7500
+        },
+        {
+          "commodity": "Mango(Raw-Ripe)",
+          "variety": "Mango - Raw-Ripe",
+          "grade": "FAQ",
+          "min_price": 3000,
+          "max_price": 4500,
+          "modal_price": 4000
+        },
+        {
+          "commodity": "Drumstick",
+          "variety": "Drumstick",
+          "grade": "FAQ",
+          "min_price": 7600,
+          "max_price": 8500,
+          "modal_price": 8000
+        },
+        {
+          "commodity": "Cabbage",
+          "variety": "Cabbage",
+          "grade": "FAQ",
+          "min_price": 3800,
+          "max_price": 5500,
+          "modal_price": 5000
+        },
+        {
+          "commodity": "Brinjal",
+          "variety": "Brinjal",
+          "grade": "FAQ",
+          "min_price": 5000,
+          "max_price": 6500,
+          "modal_price": 6000
+        },
+        {
+          "commodity": "Cauliflower",
+          "variety": "Cauliflower",
+          "grade": "Grade A",
+          "min_price": 5800,
+          "max_price": 6500,
+          "modal_price": 6000
+        },
+        {
+          "commodity": "Elephant Yam(Suran)/Amorphophallus",
+          "variety": "Other",
+          "grade": "FAQ",
+          "min_price": 3500,
+          "max_price": 5000,
+          "modal_price": 4500
+        },
+        {
+          "commodity": "Pumpkin",
+          "variety": "Pumpkin",
+          "grade": "FAQ",
+          "min_price": 2200,
+          "max_price": 4000,
+          "modal_price": 3000
+        },
+        {
+          "commodity": "Bitter gourd",
+          "variety": "Bitter Gourd",
+          "grade": "FAQ",
+          "min_price": 6500,
+          "max_price": 8000,
+          "modal_price": 7500
+        },
+        {
+          "commodity": "Banana - Green",
+          "variety": "Banana - Green",
+          "grade": "FAQ",
+          "min_price": 6000,
+          "max_price": 7500,
+          "modal_price": 7000
+        },
+        {
+          "commodity": "Bhindi(Ladies Finger)",
+          "variety": "Bhindi",
+          "grade": "FAQ",
+          "min_price": 3500,
+          "max_price": 5000,
+          "modal_price": 4500
+        },
+        {
+          "commodity": "Ginger(Green)",
+          "variety": "Green Ginger",
+          "grade": "FAQ",
+          "min_price": 20000,
+          "max_price": 25000,
+          "modal_price": 23000
+        }
+      ]
+    }
+  }
+}
