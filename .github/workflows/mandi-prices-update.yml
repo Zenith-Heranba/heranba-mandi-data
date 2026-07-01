@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Diagnose egress IP
+        run: (Invoke-WebRequest -Uri "https://api.ipify.org" -UseBasicParsing).Content
+
       - name: Install dependencies
         run: pip install requests
 
