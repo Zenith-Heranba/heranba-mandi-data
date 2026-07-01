@@ -24,10 +24,12 @@ from datetime import datetime, timedelta
 # The API key can be hardcoded for local testing, but in production
 # (GitHub Actions) it should come from an environment variable / secret
 # instead — never commit a real key into a public repo.
-API_KEY = os.environ.get(
-    "DATA_GOV_API_KEY",
-    "579b464db66ec23bdd000001ee428f4b1aed4e0e6afc0fd68fe44756",
-)
+API_KEY = os.environ.get("DATA_GOV_API_KEY")
+if not API_KEY:
+    raise SystemExit(
+        "DATA_GOV_API_KEY is not set. Export it locally before running, "
+        "e.g. (PowerShell) $env:DATA_GOV_API_KEY='your-key-here'"
+    )
 RESOURCE_ID = "35985678-0d79-46b4-9ed6-6f13308a1d24"
 BASE_URL = f"https://api.data.gov.in/resource/{RESOURCE_ID}"
 PAGE_SIZE = 1000
