@@ -51,6 +51,8 @@ def fetch_all_records_for_date(date_str, max_pages=100):
             "filters[Arrival_Date]": date_str,
         }
         resp = requests.get(BASE_URL, params=params, headers=REQUEST_HEADERS, timeout=30)
+        if not resp.ok:
+            print(f"HTTP {resp.status_code} error body: {resp.text[:500]}")
         resp.raise_for_status()
         data = resp.json()
         batch = data.get("records", [])
