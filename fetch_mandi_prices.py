@@ -34,6 +34,12 @@ RESOURCE_ID = "35985678-0d79-46b4-9ed6-6f13308a1d24"
 BASE_URL = f"https://api.data.gov.in/resource/{RESOURCE_ID}"
 PAGE_SIZE = 1000
 TOP_MARKETS_PER_STATE = 3
+# Mandis report arrival prices gradually throughout the day, so a same-day
+# snapshot taken in the morning often only has a handful of early-reporting
+# states. Require at least this many distinct states before accepting a
+# date's data as "complete enough" to publish — otherwise fall back to the
+# previous day, which will have a full day's worth of reports.
+MIN_STATES_FOR_COMPLETE_DAY = 15
 # Some networks (corporate proxies/firewalls) throttle or hang requests sent
 # with the default "python-requests/x.x" User-Agent. A normal-looking UA
 # avoids that.
@@ -68,15 +74,23 @@ def fetch_all_records_for_date(date_str, max_pages=100):
 
 
 def get_latest_available_records(max_days_back=5):
-    """Try today, then walk backwards until we find a day with data."""
+    """Try today, then walk backwards until we find a day with data from
+    enough states to be worth publishing. Falls back to the best (most
+    states) day found if none meet the threshold."""
     today = datetime.now()
+    best_date_str, best_records = None, []
     for days_back in range(max_days_back):
         d = today - timedelta(days=days_back)
         date_str = d.strftime("%d/%m/%Y")
         records = fetch_all_records_for_date(date_str)
-        if records:
+        if not records:
+            continue
+        n_states = len({(r.get("State") or "").strip() for r in records} - {""})
+        if n_states > len({(r.get("State") or "").strip() for r in best_records} - {""}):
+            best_date_str, best_records = date_str, records
+        if n_states >= MIN_STATES_FOR_COMPLETE_DAY:
             return date_str, records
-    return None, []
+    return best_date_str, best_records
 
 
 def build_dataset():
